@@ -1,0 +1,287 @@
+@-webkit-keyframes rock{
+	0%{transform: rotate(0deg)}
+	10%{transform: rotate(3deg)}
+	20%{transform: rotate(-3deg)}
+	30%{transform: rotate(2deg)}
+	40%{transform: rotate(-2deg)}
+	50%{transform: rotate(1deg)}
+	60%{transform: rotate(-1deg)}
+	70%{transform: rotate(0deg)}
+	100%{transform: rotate(0deg)}
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	min-width: 1200px;
+	min-height: 600px;
+}
+.main{
+	width:1200px;
+	height: 600px;
+	background: url(img/bg.jpg);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -600px;
+	margin-top: -300px;
+	overflow: hidden;
+}
+.c_zongzi_box{
+	width: 312px;
+	height: 305px;
+	position: absolute;
+	left:700px;
+	top: 184px;
+}
+.c_zongzi_box_rock{
+	-webkit-animation: rock 2s infinite;
+}
+.c_zongzi{
+	width: 312px;
+	height: 305px;
+	background: url(img/zz.png);
+	transition: all 1s;
+	opacity: 1;
+}
+.c_zongzi_out{
+	opacity: 0;
+	transform: scale(.5);
+}
+.c_shengzi_1{
+	width: 218px;
+	height: 180px;
+	background: url(img/line_1.png);
+	position:absolute;
+	top: 121px;
+	left: 10px;
+	z-index: 999;
+	cursor: pointer;
+}
+.c_shengzi_2{
+	width: 219px;
+	height: 159px;
+	background: url(img/line_2.png);
+	position:absolute;
+	top: 158px;
+	left: 10px;
+}
+.c_shengzi_3{
+	width: 264px;
+	height: 117px;
+	background: url(img/line_3.png);
+	position:absolute;
+	top: 220px;
+	left: 10px;
+}
+.c_shengzi_4{
+	width: 288px;
+	height: 56px;
+	background: url(img/line_4.png);
+	position:absolute;
+	top: 290px;
+	left: 10px;
+}
+.c_shengzi_0{
+	display: none;
+}
+.c_zongzirou{
+	width: 288px;
+	height: 234px;
+	background: url(img/zzr_1.png);
+	position:absolute;
+	top: 40px;
+	left: 17px;
+	background-size: 288px 234px;
+	z-index: 110;
+	opacity: 0;
+	transition: all 1s;
+	transform: scale(.8);
+}
+.c_zongzirou_in{
+	opacity: 1;
+	transform: scale(1);
+}
+.c_zuoye{
+	width: 114px;
+	height: 266px;
+	background: url(img/leaf_left.png);
+	position:absolute;
+	top: -30px;
+	left: -5px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 1s;
+	transform-origin: left bottom;
+}
+.c_zuoye_in{
+	opacity: 1;
+	transform: rotate(-5deg);
+}
+.c_zuoye_out{
+	opacity: 0;
+	transform: rotate(-15deg);
+}
+.c_youye{
+	width: 318px;
+	height: 338px;
+	background: url(img/leaf_right.png);
+	position:absolute;
+	top: -50px;
+	left: 80px;
+	z-index: 111;
+	opacity: 0;
+	transform: scale(.8);
+	transform-origin: left bottom;
+	transition: all 1s;
+}
+.c_youye_in{
+	opacity: 1;
+	transform: rotate(5deg) scale(.8);
+}
+.c_youye_out{
+	opacity: 0;
+	transform: rotate(15deg) scale(.8);
+}
+.c_diye{
+	width: 618px;
+	height: 468px;
+	background: url(img/leaf_expand.png);
+	position:absolute;
+	top: -45px;
+	left: -150px;
+	z-index: 99;
+	opacity: 0;
+	transition: all 1s;
+}
+.c_diye_in{
+	opacity: 1;
+}
+.c_t_1{
+	width: 180px;
+	height: 100px;
+	background: url(img/t_jixiang.png);
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -116px;
+	margin-top: -18px;
+	z-index: 200;
+	transform: scale(.6);
+	transform-origin: center center;
+	opacity: 0;
+	transition: all 1s;
+}
+.c_t_2{
+	width: 180px;
+	height: 100px;
+	background: url(img/t_ruyi.png);
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -116px;
+	margin-top: -18px;
+	z-index: 200;
+	transform: scale(.6);
+	transform-origin: center center;
+	opacity: 0;
+	transition: all 1s;
+}
+.c_t_3{
+	width: 180px;
+	height: 100px;
+	background: url(img/t_xingfu.png);
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -116px;
+	margin-top: -18px;
+	z-index: 200;
+	transform: scale(.6);
+	transform-origin: center center;
+	opacity: 0;
+	transition: all 1s;
+}
+.c_t_in{
+	opacity: 1;
+	transform: scale(1);
+}
+.c_t_out{
+	// display: none;
+	transform: scale(1);
+	opacity: 0;
+}
+.c_t_move_1{
+	transform: rotateY(180deg);
+}
+.c_t_move_2{
+	transform: rotateY(360deg);
+}
+.text{
+	position: absolute;
+	width: 400px;
+	height: 370px;
+	left: 180px;
+	top: 140px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+}
+.text_in{
+}
+.text .caption{
+	width: 400px;
+	height: 240px;
+	background: url(img/captionnew.png);
+	margin-left: 40px;
+	transition: all 1s 0s;
+	opacity: 0;
+}
+.text .to{
+	width: 400px;
+	margin-top: 10px;
+	margin-left: 40px;
+	transition: all 1s 1.5s;
+	opacity: 0;
+}
+.text .msg{
+	width: 400px;
+	margin-top: 10px;
+	margin-left: 40px;
+	transition: all 1s 3s;
+	opacity: 0;
+}
+.text .from{
+	width: 400px;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: right;
+	transition: all 1s 4.5s;
+	opacity: 0;
+}
+.text_in .caption,.text_in .to,
+.text_in .msg,.text_in .from{
+	margin-left: 0px;
+	opacity: 1;
+}
+
+//定义粽子被吃掉的状态
+.c_zongzirou_bite_0{
+	background: url(img/zzr1bite_0.png);
+}
+.c_zongzirou_bite_1{
+	background: url(img/zzr1bite_1.png);
+}
+.c_zongzirou_bite_2{
+	background: url(img/zzr1bite_2.png);
+}
+.c_zongzirou_bite_3{
+	background: url(img/zzr1bite_3.png);
+}
+.c_zongzirou_bite_4{
+	background: url(img/zzr1bite_4.png);
+}
+.c_zongzirou_bite_5{
+	display: none;
+}
